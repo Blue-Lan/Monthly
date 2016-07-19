@@ -9,7 +9,7 @@ Monthly 2.0.7 by Kevin Thornbloom is licensed under a Creative Commons Attributi
       var defaults = {
         weekStart: 'Sun',
         mode: '',
-        xmlUrl: '',
+        jsonUrl: '',
         target: '',
         eventList: true,
         maxWidth: false,
@@ -156,7 +156,7 @@ Monthly 2.0.7 by Kevin Thornbloom is licensed under a Creative Commons Attributi
       if (options.mode == 'event') {
         // Remove previous events
         // Add Events
-        $.get(''+options.xmlUrl+'', function(d){
+        $.get(''+options.jsonUrl+'', function(d){
           d.forEach(function(event) {
               console.log(event);
               // Year [0]   Month [1]   Day [2]
